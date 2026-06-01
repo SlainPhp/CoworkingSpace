@@ -1,3 +1,4 @@
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -17,9 +18,16 @@ public class CoworkingSystem {
     public void registerUser(Users users) {
         usersList.add(users);
         System.out.println("Зарегестрирован пользователь " + users.getSurname() + " " + users.getName());
+
     }
     public void canselBooking(Users users, Workspace workspace){
     accountingForArmor.remove(users, workspace);
         System.out.println("Пользователь " + users.getSurname() + " " + users.getName() + " отменяет бронь " + workspace.getType() + " N " + workspace.getNumber());
+    }
+    public void listOfAvailablePlaces() {
+        System.out.println("Список доступных мест:");
+        for(Workspace freePlaces : listWorkingspaces ) {
+            System.out.println(freePlaces.getNumber() + " " + freePlaces.getType());
+        }
     }
 }

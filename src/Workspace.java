@@ -1,10 +1,11 @@
 import java.util.HashMap;
 
+
 public class Workspace implements Comparable<Workspace>, AccountingForArmor {
-    public int number;
-    public Type type;
-    public HashMap<Integer, Type> freeWorkspaces = new HashMap<>();
-    public HashMap<Integer, Type> bookedWorkspaces = new HashMap<>();
+    private int number;
+    private Type type;
+    private HashMap<Integer, Type> freeWorkspaces = new HashMap<>();
+    private HashMap<Integer, Type> bookedWorkspaces = new HashMap<>();
 
     public Workspace(int number, Type type) {
         this.number = number;
