@@ -18,6 +18,7 @@ public class CoworkingSystem {
     public void registerUser(Users users) {
         usersList.add(users);
         System.out.println("Зарегестрирован пользователь " + users.getSurname() + " " + users.getName());
+        users.sortUsers();
 
     }
     public void canselBooking(Users users, Workspace workspace){

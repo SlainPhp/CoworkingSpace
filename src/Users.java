@@ -1,8 +1,9 @@
 
+import java.util.Comparator;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class Users implements Comparable<Users> {
+public class Users {
     private String name;
     private String surname;
     private String UUID;
@@ -49,9 +50,7 @@ public class Users implements Comparable<Users> {
             System.out.println("У пользователя нет брони на это место");
         }
     }
-
-    @Override
-    public int compareTo(Users o) {
-        return this.surname.compareTo(o.surname);
+    void sortUsers() {
+        Comparator<Users> usersComparator = Comparator.comparing(Users::getName).thenComparing(Users::getSurname);
     }
 }
